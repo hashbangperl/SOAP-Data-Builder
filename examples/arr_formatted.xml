@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:env xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Product>
+    <productOffering>XPD-2333</productOffering>
+    <action>add</action>
+    <setting>
+      <settingName>Speed</settingName>
+      <settingValue>256</settingValue>
+    </setting>
+    <setting>
+      <settingName>Name</settingName>
+      <settingValue>test</settingValue>
+    </setting>
+  </Product>
+</soap:env>
