@@ -1,5 +1,8 @@
 Revision history for Perl extension SOAP::Data::Builder.
 
+1.0   Wed 14 2012
+	- applied patch from Caleb Cushing to catch missing parent argument in find_elem
+
 0.09  Sun Jan 29 2006
 	- fixed Makefile.PL prerequisites
         - added trivial tests
