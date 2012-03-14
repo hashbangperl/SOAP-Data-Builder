@@ -1,15 +1,5 @@
 package SOAP::Data::Builder;
-
-use SOAP::Data::Builder::Element;
-
-# Copyright (c) 2004,2005 Aaron Trevena
-
-# This Module provides a quick and easy way to build complex SOAP data
-# and header structures for use with SOAP::Lite.
-
-# It primarily provides a wrapper around SOAP::Serializer and SOAP::Data
-# (or SOAP::Header) enabling you to generate complex XML within your SOAP
-# request or response.
+use strict;
 
 =head1 NAME
 
@@ -23,6 +13,10 @@ use SOAP::Data::Builder::Element;
   It primarily provides a wrapper around SOAP::Serializer and SOAP::Data
   (or SOAP::Header) enabling you to generate complex XML within your SOAP
   request or response.
+
+=head1 VERSION
+
+1.0
 
 =head1 SYNOPSIS
 
@@ -76,12 +70,12 @@ use SOAP::Data::Builder::Element;
 
 =cut
 
+use SOAP::Data::Builder::Element;
 use SOAP::Lite ( maptype => {} );
 
 use Data::Dumper;
-use strict;
 
-our $VERSION = "0.9";
+our $VERSION = 1.0;
 
 =head1 METHODS
 
@@ -254,6 +248,9 @@ sub get_elem {
 
 sub find_elem {
     my ($self,$parent,$key,@keys) = @_;
+
+    croak 'parent not defined' unless $parent;
+
     my ($a,$b);
     foreach my $elem ( $parent->get_children()) {
 	next unless ref $elem;
