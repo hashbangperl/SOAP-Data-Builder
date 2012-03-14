@@ -1,12 +1,8 @@
 package SOAP::Data::Builder::Element;
-# Copyright (c) 2003 Surrey Technologies, Ltd ( http://www.surreytech.co.uk )
-
-# This Module provides a quick and easy way to build complex SOAP data
-# and header structures for use with SOAP::Lite, managed by SOAP::Data::Builder.
 
 =head1 NAME
 
-  SOAP::Data::Builder::Entity - A simple wrapper SOAP::Data
+  SOAP::Data::Builder::Element - A simple wrapper SOAP::Data Elements
 
 =head1 DESCRIPTION
 
@@ -22,10 +18,10 @@ use strict;
 
 =head2 new(autotype=>0)
 
-Constructor method for this class, it instantiates and returns the entity object,
+Constructor method for this class, it instantiates and returns the element object,
 taking value and attributes as named parameters
 
-my $entity = SOAP::Data::Builder::Entity->new( name=> 'anExample', VALUE=> 'foo', attributes => { 'ns1:foo' => 'bar'});
+my $element = SOAP::Data::Builder::Element->new( name=> 'anExample', VALUE=> 'foo', attributes => { 'ns1:foo' => 'bar'});
 
 optional parameters are : value, attributes, header, isMethod
 
